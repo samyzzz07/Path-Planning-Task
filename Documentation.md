@@ -69,6 +69,11 @@ Limitations:
 - Two cones at the same position let the program assume zero direction, so that rule is skipped and the next one is used
 - If the real track width differs from the estimated one, the path is incorrect
 - If the car goes off course, it is hard for it to reroute to the center line again
+- When the cones disagree about the track direction, the path can go wrong
+  (scenario 15). The two blue cones suggest the track turns up and to the left,
+  but the one real gate (blue and yellow) suggests it goes straight. The code
+  uses the two blue cones for the direction, so the virtual yellow cone ends up
+  in the wrong place.
 
 Assumptions:
 
